@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <div>
       <Link href='/about'>
-        <a>About Page</a>
+        <button>About Page</button>
       </Link>
       <Link href='/contact'>
         <a>Contact Page</a>
