@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class Index extends Component {
   constructor(props) {
@@ -6,16 +7,47 @@ class Index extends Component {
   }
 
   static async getInitialProps() {
-    console.log('FETCHING YOUR DATA INSIDE GETINITIALPROPS')
+    const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+
+    const { data } = res
+
+    return { posts: data }
   }
 
   render() {
+    const { posts } = this.props
     return (
       <div>
-        <h1>our Index page!!!!!!</h1>
+        <h1>Our Index Page</h1>
+        <ul>
+          {posts.map(post => (
+            <li key={post.id}>{post.title}</li>
+          ))}
+        </ul>
       </div>
     )
   }
 }
+
+// const Index = ({ posts }) => {
+//   return (
+//     <div>
+//       <h1>Our Index Page</h1>
+//       <ul>
+//         {posts.map(post => (
+//           <li key={post.id}>{post.title}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   )
+// }
+
+// Index.getInitialProps = async () => {
+//   const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+
+//   const { data } = res
+
+//   return { posts: data }
+// }
 
 export default Index

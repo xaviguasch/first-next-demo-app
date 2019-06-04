@@ -62,7 +62,7 @@ var AboutPage = function AboutPage() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fxaviguasch%2Fdev%2Fcourses-sept-2018%2Fsteele-the-modern-react-bootcamp%2Fs37-next-js%2F01-first-next-app%2Ffirst-next%2Fpages%2Fabout.js ***!
   \**************************************************************************************************************************************************************************************************************************/
@@ -85,5 +85,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=about.js.map
